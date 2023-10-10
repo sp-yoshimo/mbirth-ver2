@@ -9,6 +9,7 @@ import { signOut } from "next-auth/react";
 import toast from "react-hot-toast";
 import useFavoritesModal from "@/app/hooks/useFavoritesModal";
 import useFollowsModal from "@/app/hooks/useFollowsModal";
+import useFollow from "@/app/hooks/useFollow";
 
 interface MobileUserInfoModalProps {
     user: User,
@@ -46,6 +47,8 @@ const MobileUserInfoModal: React.FC<MobileUserInfoModalProps> = ({
         mobileUserInfoModal.onClose()
     }
 
+    const { hasFollowed, toggleFollow } = useFollow(user.id);
+
     const handleSignOut = () => {
         signOut()
             .then(() => {
@@ -73,14 +76,14 @@ const MobileUserInfoModal: React.FC<MobileUserInfoModalProps> = ({
                                 <p className="text-xl font-bold">{user.name}</p>
                                 <p className="text-sm font-normal">{user.description}</p>
                                 <div className="mt-5 flex">
-                                    <div 
-                                    onClick={handleShowFavorites}
-                                    className="cursor-pointer hover:text-rose-500 transform duration-150">
+                                    <div
+                                        onClick={handleShowFavorites}
+                                        className="cursor-pointer hover:text-rose-500 transform duration-150">
                                         <p>いいね {FavoriteQuestions?.length}件</p>
                                     </div>
                                     <div
-                                    onClick={handleShoeFollows}
-                                    className="cursor-pointer hover:text-sky-500 transform duration-150 ml-5 md:ml-8">
+                                        onClick={handleShoeFollows}
+                                        className="cursor-pointer hover:text-sky-500 transform duration-150 ml-5 md:ml-8">
                                         <p>フォロー {FollowUsers?.length}人</p>
                                     </div>
                                 </div>
@@ -103,12 +106,30 @@ const MobileUserInfoModal: React.FC<MobileUserInfoModalProps> = ({
                                         </>
                                     ) : (
                                         <>
-                                            <Button
-                                            label="フォローする"
-                                            type="button"
-                                            isSmall
-                                            onClick={()=>{}}
-                                            />
+                                            {hasFollowed ? (
+                                                <div
+                                                    onClick={toggleFollow}
+                                                >
+                                                    <Button
+                                                        label="フォロー解除"
+                                                        type="button"
+                                                        isSmall
+                                                        isSecondary
+                                                        onClick={() => { }}
+                                                    />
+                                                </div>
+                                            ) : (
+                                                <div
+                                                onClick={toggleFollow}
+                                                >
+                                                    <Button
+                                                        label="フォローする"
+                                                        type="button"
+                                                        isSmall
+                                                        onClick={() => { }}
+                                                    />
+                                                </div>
+                                            )}
                                         </>
                                     )}
                                 </div>
