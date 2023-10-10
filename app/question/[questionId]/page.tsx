@@ -2,7 +2,6 @@ import getCurrentUser from "@/app/actions/getCurrentUser";
 import getQuestionById from "@/app/actions/getQuestionById";
 import PostModal from "@/app/components/modals/PostModal";
 import Nav from "@/app/components/nav/Nav";
-import ModalCloseContext from "@/app/context/ModalCloseContext";
 import React from "react";
 import QuestionContainer from "./components/QuestionContainer";
 import QuestionEditModal from "@/app/components/modals/QuestionEditModal";
@@ -34,7 +33,6 @@ const QuestionPage = async (
     return (
         <>
             <PostModal/>
-            <ModalCloseContext />
             <QuestionEditModal
             question={question}
             />

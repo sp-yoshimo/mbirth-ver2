@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import HeartButton from "../HeartButton";
 import { User } from "@prisma/client";
 import axios from "axios";
+import useFavoritesModal from "@/app/hooks/useFavoritesModal";
 
 
 interface QuestionCardProps {
@@ -23,6 +24,12 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     const router = useRouter();
 
     const [likeCount, setLikeCount] = useState(0);
+    const favoritesQuestionsModal = useFavoritesModal();
+
+    const handleCloseFavoritesModal = () => {
+        favoritesQuestionsModal.onClose();
+        router.push(`/question/${question.id}`)
+    }
 
     axios.get(`/api/favorites/${question.id}`)
         .then((res) => {
@@ -77,7 +84,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                         <div>
                             <Button
                                 label="見に行く"
-                                onClick={() => { router.push(`/question/${question.id}`) }}
+                                onClick={handleCloseFavoritesModal}
                                 type="button"
                                 isSmall
                             />

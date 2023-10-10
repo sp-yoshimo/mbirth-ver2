@@ -2,7 +2,6 @@ import getCurrentUser from "./actions/getCurrentUser";
 import Intro from "./components/Intro";
 import Nav from "./components/nav/Nav";
 import Main from "./components/question/Main";
-import ModalCloseContext from "./context/ModalCloseContext";
 
 
 export default async function Home() {
@@ -11,7 +10,6 @@ export default async function Home() {
 
   return (
     <div>
-      <ModalCloseContext />
       <div>
         <Nav
           currentUser={currentUser}

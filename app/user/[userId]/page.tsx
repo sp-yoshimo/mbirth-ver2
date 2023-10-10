@@ -7,7 +7,6 @@ import { SafePost } from "@/app/types";
 import Profile from "./components/Profile";
 import getUserById from "@/app/actions/getUserbyId";
 import getFavoriteQuestions from "@/app/actions/getFavoriteQuestions";
-import ModalCloseContext from "@/app/context/ModalCloseContext";
 import getFollows from "@/app/actions/getFollows";
 
 
@@ -33,7 +32,6 @@ export default async function UserPage({ params }: { params: IParams }) {
     return (
         <div className="h-screen overflow-hidden">
             <PostModal />
-            <ModalCloseContext />
             <div>
                 <Nav
                     currentUser={currentUser}

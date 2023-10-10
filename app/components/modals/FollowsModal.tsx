@@ -32,7 +32,7 @@ const FollowsModal: React.FC<FollowModalProps> = ({
                 </div>
                 <div className="p-2 h-[60vh] overflow-y-auto pb-10">
                     {FollowUsers && FollowUsers.length > 0 ? (
-                        <div className="flex-col space-y-2">
+                        <div className="flex-col space-y-4">
                             {FollowUsers.map((user)=>(
                                 <FollowUserBox
                                 key={user.id}

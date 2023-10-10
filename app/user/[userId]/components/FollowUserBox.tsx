@@ -17,10 +17,15 @@ const FollowUserBox: React.FC<FollowUserBoxProps> = ({
     const router = useRouter();
     const FollowUsersModal = useFollowsModal();
 
+    const handleShowOtherUser = () => {
+        FollowUsersModal.onClose();
+        router.push(`/user/${FollowUser.id}`)
+    }
+
 
     return (
         <div
-            onClick={()=>{router.push(`/user/${FollowUser.id}`)}}
+            onClick={handleShowOtherUser}
             className="p-2 hover:bg-neutral-100 rounded-lg transform duration-150 cursor-pointer">
             <div className="flex items-center">
                 <div>
