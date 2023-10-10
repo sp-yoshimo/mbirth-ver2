@@ -47,7 +47,7 @@ const MobileUserInfoModal: React.FC<MobileUserInfoModalProps> = ({
         mobileUserInfoModal.onClose()
     }
 
-    const { hasFollowed, toggleFollow } = useFollow(user.id);
+    const { hasFollowed, toggleFollow } = useFollow(user.id, currentUser);
 
     const handleSignOut = () => {
         signOut()
