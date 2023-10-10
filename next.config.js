@@ -2,7 +2,9 @@
 const nextConfig = {
   experimental: {
     serverActions: true,
-    swcMinify: false
+    swcPlugins: [
+      ["next-superjson-plugin", {}]
+    ]
   },
   images:{
     domains:[
