@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import SidebarItem from "./SidebarItem";
 import { useRouter } from "next/navigation";
 import { BsStars } from "react-icons/bs"
@@ -6,7 +6,6 @@ import { AiFillHeart } from "react-icons/ai"
 import { BiWorld } from "react-icons/bi"
 import { FaUserCheck } from "react-icons/fa"
 import useQueryMode from "@/app/hooks/useQueryMode";
-import Button from "../Button";
 
 const Sidebar = () => {
 

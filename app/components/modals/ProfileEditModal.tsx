@@ -10,7 +10,6 @@ import Button from "../Button";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Input from "../inputs/Input";
-import Avatar from "../Avatar";
 import { useRouter } from "next/navigation";
 
 interface ProfileEditModalProps {

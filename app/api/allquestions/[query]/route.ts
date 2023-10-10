@@ -1,7 +1,6 @@
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import getUserQuestions from "@/app/actions/getUserQuestions";
 import prisma from "@/app/libs/prismadb"
-import { SafePost } from "@/app/types";
 import { NextResponse } from "next/server";
 
 interface IParams {

@@ -3,7 +3,6 @@ import logo from "@/public/images/logo.png"
 import AuthForm from "./components/AuthForm";
 import Nav from "../components/nav/Nav";
 import getCurrentUser from "../actions/getCurrentUser";
-import { useRouter } from "next/navigation";
 
 export default async function Auth() {
 

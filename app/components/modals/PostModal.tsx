@@ -12,7 +12,6 @@ import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { useRouter } from "next/navigation";
 import { TiDelete } from "react-icons/ti";
 
 

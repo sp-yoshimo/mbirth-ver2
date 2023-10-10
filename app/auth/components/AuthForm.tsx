@@ -3,8 +3,7 @@
 import Button from "@/app/components/Button";
 import Input from "@/app/components/inputs/Input";
 import axios from "axios";
-import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import { signIn, useSession } from "next-auth/react"

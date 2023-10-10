@@ -6,7 +6,6 @@ import React, { Fragment } from "react";
 import { IoClose } from "react-icons/io5"
 import { BsBoxArrowUpRight } from "react-icons/bs"
 import { User } from "@prisma/client"
-import { signOut } from "next-auth/react"
 import Button from "../Button";
 import Avatar from "../Avatar";
 import usePostModal from "@/app/hooks/usePostModal";
