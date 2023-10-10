@@ -23,7 +23,7 @@ const ModalCloseContext = () => {
     const questionDeleteModal = useQuestionDeleteModal();
 
 
-    useEffect(()=>{
+    useEffect(() => {
 
         FavoritesModal.onClose();
         loginWarnModal.onClose();
@@ -36,9 +36,17 @@ const ModalCloseContext = () => {
         questionDeleteModal.onClose();
 
 
-    },[])
+    }, [FavoritesModal,
+        loginWarnModal,
+        MobileUserInfoModal,
+        postModal,
+        profileEditModal,
+        favoriteQuestionsModal,
+        followsModal,
+        questionDeleteModal,
+        questionEditModal])
 
-    return(
+    return (
         <div></div>
     )
 };

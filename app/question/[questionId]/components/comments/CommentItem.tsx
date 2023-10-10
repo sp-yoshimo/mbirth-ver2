@@ -33,7 +33,7 @@ const CommentItem: React.FC<CommentItemProps> = ({
 
         return ""
 
-    }, [])
+    }, [comment?.createdAt])
 
     const [isLoading, setIsLoading] = useState(false);
 

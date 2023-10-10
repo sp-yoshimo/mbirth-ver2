@@ -139,6 +139,8 @@ export async function GET(
             return NextResponse.json(returnFollowsQuestions);
         }
 
+        return NextResponse.json(baseQuestions);
+
 
     } catch (err) {
         console.log(err);

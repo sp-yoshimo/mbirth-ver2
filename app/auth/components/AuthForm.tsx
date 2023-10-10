@@ -53,7 +53,7 @@ const AuthForm = () => {
         } else {
             setVariantState("LOGIN")
         }
-    }, [variantState])
+    }, [variantState, router])
 
     const {
         register,
