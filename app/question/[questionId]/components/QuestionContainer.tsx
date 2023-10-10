@@ -40,15 +40,6 @@ const QuestionContainer: React.FC<QuestionContainerProps> = ({
         })
         .catch(error => console.log(error))
 
-    const isOwn = useMemo(() => {
-
-        if (currentUser && question) {
-            return currentUser.id === question.user.id
-        }
-
-        return false
-
-    }, [currentUser, question, currentUser?.id, question?.user.id])
 
     const createdDate = useMemo(() => {
 
@@ -150,7 +141,7 @@ const QuestionContainer: React.FC<QuestionContainerProps> = ({
                         <div>
                             <p className="text-sm md:text-base">{createdDate}に投稿</p>
                         </div>
-                        {isOwn && (
+                        {currentUser?.id === question.user.id && (
                             <div className="flex items-center gap-5">
                                 <div
                                     onClick={() => { questionEditModal.onOpen() }}
