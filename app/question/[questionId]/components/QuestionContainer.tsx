@@ -48,7 +48,7 @@ const QuestionContainer: React.FC<QuestionContainerProps> = ({
 
         return false
 
-    }, [currentUser?.id, question?.user?.id, currentUser, question])
+    }, [currentUser, question, currentUser?.id, question?.user.id])
 
     const createdDate = useMemo(() => {
 
