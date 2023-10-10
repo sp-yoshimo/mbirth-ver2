@@ -1,4 +1,3 @@
-import getAllQuestions from "./actions/getAllQuestions";
 import getCurrentUser from "./actions/getCurrentUser";
 import Intro from "./components/Intro";
 import Nav from "./components/nav/Nav";

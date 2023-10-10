@@ -2,7 +2,8 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-    serverActions: true
+    serverActions: true,
+    swcMinify: false
   },
   images:{
     domains:[

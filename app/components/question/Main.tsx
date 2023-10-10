@@ -37,15 +37,12 @@ const Main: React.FC<MainProps> = ({
 
             await axios.get(`/api/allquestions/${query}`)
                 .then((res) => {
-                    console.log(res);
-
                     setQuestions(res.data)
                 })
                 .catch(() => {
                     toast.error("データの取得に失敗しました")
                 })
                 .finally(() => {
-                    // console.log(questions);
                     setIsLoading(false)
                 })
 
