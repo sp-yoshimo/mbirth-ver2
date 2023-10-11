@@ -27,7 +27,7 @@ const FavoritesModal: React.FC<FavoritesModalProps> = ({
             isOpen={favoritesModal.isOpen}
             onClose={favoritesModal.onClose}
         >
-            <div className="w-full">
+            <div className="w-full ">
                 <div>
                     <Header
                         title={user.name + "のいいねした投稿"}

@@ -39,7 +39,7 @@ export default async function UserPage({ params }: { params: IParams }) {
             </div>
             <div className="pt-16">
                 <div className="flex flex-col xl:flex-row">
-                    <div className="w-full xl:w-1/5 xl:p-6 xl:pt-24">
+                    <div className="w-full xl:w-1/5 p-1 xl:p-3 2xl:p-6 2xl:pt-24 xl:pt-24">
                         {user && (
                             <Profile
                                 user={user}

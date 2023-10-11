@@ -77,9 +77,9 @@ const Profile: React.FC<ProfileProps> = ({
                 user={user}
                 FollowUsers={FollowUsers}
             />
-            <div className="bg-white border shadow-none xl:shadow-xl rounded-none xl:rounded-xl p-1 2xl:p-3 w-full overflow-hidden block max-xl:fixed max-xl:bottom-0 z-30 relative">
+            <div className="bg-white border shadow-none xl:shadow-xl rounded-none xl:rounded-xl p-3 w-full overflow-hidden block max-xl:fixed max-xl:bottom-0 z-30 relative">
                 <div className="flex-row items-center gap-2">
-                    <div className="py-1 xl:py-3">
+                    <div className="py-3">
                         <div>
                             <div className="hidden xl:flex justify-center">
                                 <Avatar

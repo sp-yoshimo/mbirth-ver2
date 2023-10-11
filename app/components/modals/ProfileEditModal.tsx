@@ -72,11 +72,11 @@ const ProfileEditModal: React.FC<ProfileEditModalProps> = ({
             isOpen={profileEditModal.isOpen}
             onClose={profileEditModal.onClose}
         >
-            <div>
+            <div className="">
                 <Header
                     title="プロフィールを編集"
                 />
-                <div className="w-full mt-5">
+                <div className="w-full mt-5 h-[70vh] overflow-y-auto p-2">
                     <form
                         onSubmit={handleSubmit(onSubmit)}
                     >
